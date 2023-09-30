@@ -1,2 +1,2 @@
-# pjatkLab1
-Opis Lab 1
+# Opis mojego programu
+Mój pierwszy program napisany na lab 1.
