@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string access = "choinka";
+    string haslo;
+    int podejscia = 5;
+
+    cout << "Masz 5 prob aby podac poprawne haslo i otrzymac hajs na swieta!" << endl;
+    cout << "Podaj haslo: ";
+
+    while (podejscia > 0)
+    {
+        cin >> haslo;
+
+        if (haslo == access)
+        {
+            cout << "Udalo Ci sie! Jednak to byl tylko prank :((" << endl;
+            break;
+        }
+
+        else
+        {
+            podejscia--;
+            
+            if (podejscia > 1)
+            {
+                cout << "Probuj dalej! Masz jeszcze " << podejscia << " podejscia." << endl;
+            }
+            else if (podejscia == 1)
+                {
+                    cout << "Rusz glowa! Masz ostatnie podejscie!" << endl;
+                    cout << "Skup sie i podaj haslo: ";
+                }
+            if (podejscia == 0)
+            {
+                cout << "Niestety nie udalo sie :((" << endl;
+            }
+            
+        }
+    }
+    return 0;
+}
+
