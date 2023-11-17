@@ -1,0 +1,82 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+
+    int rundy;
+    cout << "Gramy w kamien papier! Ile rund chcesz rozegrac: ";
+    cin >> rundy;
+
+    for (int i = 0; i < rundy; i++)
+    {
+        int komputer = rand() % 3 + 1;
+        int gracz;
+        cout << "1 - kamien, 2 - papier, 3 - nozyce: ";
+        cin >> gracz;
+
+        if (gracz < 1 || gracz > 3)
+        {
+            cout << "Wybierz od 1 do 3" << endl;
+            i--;
+            continue;
+        }
+
+        cout << "Wybor komputera: ";
+        switch (komputer)
+        {
+        case 1:
+            cout << "kamien";
+            break;
+
+        case 2:
+            cout << "papier";
+            break;
+
+        case 3:
+            cout << "nozyce";
+            break;
+        }
+
+        cout << ", Twoj wybor to: ";
+        switch (gracz)
+        {
+        case 1:
+            cout << "kamien";
+            break;
+
+        case 2:
+            cout << "papier";
+            break;
+
+        case 3:
+            cout << "nozyce";
+            break;
+        }
+
+        if (gracz == komputer)
+        {
+            cout << ". Zremisowales!" << endl;
+        }
+        else if (gracz == 1 && komputer == 3)
+        {
+            cout << ". Wygrales!" << endl;
+        }
+        else if (gracz == 2 && komputer == 1)
+        {
+            cout << ". Wygrales!" << endl;
+        }
+        else if (gracz == 3 && komputer == 2)
+        {
+            cout << ". Wygrales!" << endl;
+        }
+        else
+        {
+            cout << ". Przegrales!" << endl;
+        }
+    }
+    return 0;
+}
