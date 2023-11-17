@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int pierwszywyraz;
+    int roznica;
+    int n;
+
+    cout << "Podaj pierwszy wyraz ciagu: ";
+    cin >> pierwszywyraz;
+
+    cout << "Podaj roznice ciagu: ";
+    cin >> roznica;
+
+    cout << "Podaj liczbe elementow ciagu: ";
+    cin >> n;
+
+    int suma = (2 * pierwszywyraz + (n - 1)) * roznica * n / 2;
+
+    cout << "Suma ciagu wynosi: " << suma << endl;
+
+    return 0;
+}
