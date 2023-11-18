@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int czySzescian(int liczba)
+{
+    int n = 1;
+    while (n * n * n < liczba) 
+    {
+        n++;
+    }
+    if (n * n * n == liczba) return 1;
+    else return 0;
+}
+
+int main()
+{
+    cout << czySzescian(1000) << endl;
+    cout << czySzescian(27) << endl;
+    cout << czySzescian(18) << endl;
+    cout << czySzescian(8) << endl;
+    cout << czySzescian(829) << endl;
+    cout << czySzescian(64) << endl;
+
+    return 0;
+}
